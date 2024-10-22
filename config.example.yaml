@@ -1,8 +1,15 @@
 # config.yaml
 outlook:
-  # Full URL looks something like thsi: https://outlook.office365.com/book/{email}/s/{token}
+  # Full URL looks something like this: https://outlook.office365.com/book/{email}/s/{token}
   email: "email_of_calendar@school.com"
   get_token: "token_part_goes_here"
+  # The service_id and staff_ids are used to filter the calendar events, get this from the payload that is sent to
+  # the service to the POST url, which looks like this: "https://outlook.office365.com/BookingsService/api/V1/bookingBusinessesc2/{OUTLOOK_EMAIL}/GetStaffAvailability?app=BookingsC2&n=7"
+  # You have to get that by going to the initial URL in the browser and using Chrome dev tools (network) tab.
+  service_id: "<some uuid goes here>"
+  staff_ids:
+    - "<some uuid goes here>"
+    - "<some uuid goes here>"
 
 twilio:
   account_sid: "TWILIO_ACCOUNT_SID"

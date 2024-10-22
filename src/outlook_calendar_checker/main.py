@@ -76,6 +76,10 @@ GET_TOKEN = config['outlook']['get_token']
 GET_URL = f"https://outlook.office365.com/book/{OUTLOOK_EMAIL}/s/{GET_TOKEN}"
 POST_URL = f"https://outlook.office365.com/BookingsService/api/V1/bookingBusinessesc2/{OUTLOOK_EMAIL}/GetStaffAvailability?app=BookingsC2&n=7"
 
+# Outlook settings
+SERVICE_ID = config['outlook']['service_id']
+STAFF_IDS = config['outlook']['staff_ids']
+
 # Twilio credentials
 ACCOUNT_SID = config['twilio']['account_sid']
 AUTH_TOKEN = config['twilio']['auth_token']
@@ -162,8 +166,8 @@ def _create_post_payload():
     end_date_str = end_date.strftime("%Y-%m-%dT00:00:00")
 
     payload = {
-        "serviceId": "a3682259-1b97-4233-8b22-79f363906586",
-        "staffIds": ["4901d63b-c33b-4e9b-95d6-d2305ef641d0"],
+        "serviceId": SERVICE_ID,
+        "staffIds": STAFF_IDS,
         "startDateTime": {
             "dateTime": start_date_str,
             "timeZone": "Pacific Standard Time"
