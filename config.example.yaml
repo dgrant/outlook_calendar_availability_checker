@@ -1,0 +1,17 @@
+# config.yaml
+outlook:
+  # Full URL looks something like thsi: https://outlook.office365.com/book/{email}/s/{token}
+  email: "email_of_calendar@school.com"
+  get_token: "token_part_goes_here"
+
+twilio:
+  account_sid: "TWILIO_ACCOUNT_SID"
+  auth_token: "TWILIO_AUTH_TOKEN"
+  phone_number: "<twilio phone number goes here>"
+
+recipients:
+  - "<recipient phone number goes here>"
+  - "<recipient phone number goes here>"
+
+
+timezone: "America/Los_Angeles"
