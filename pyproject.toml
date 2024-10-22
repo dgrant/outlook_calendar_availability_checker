@@ -1,0 +1,20 @@
+[project]
+name = "outlook_calendar_checker"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "David Grant", email = "davidgrant@gmail.com"},
+]
+dependencies = [
+    "requests>=2.32.3",
+    "twilio>=9.3.4",
+    "pytz>=2024.2",
+    "pyyaml>=6.0.2",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
